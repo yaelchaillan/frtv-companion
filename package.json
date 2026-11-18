@@ -1,0 +1,35 @@
+{
+  "name": "frtv-companion",
+  "private": true,
+  "version": "0.1.1",
+  "description": "Extension navigateur FRTV pour FACEIT : données de la scène CS2 francophone et niveaux 11+",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "zip": "wxt zip",
+    "compile": "tsc --noEmit",
+    "test": "node scripts/test.mjs run",
+    "postinstall": "node scripts/copy-flags.mjs && wxt prepare",
+    "test:watch": "node scripts/test.mjs",
+    "preview:ui": "vite --config preview/vite.config.ts"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "5.2.0",
+    "@wxt-dev/module-react": "1.2.2",
+    "flag-icons": "7.6.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.7",
+    "vitest": "4.1.12",
+    "web-ext": "10.8.0",
+    "wxt": "0.21.5"
+  }
+}

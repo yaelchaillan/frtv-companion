@@ -1,0 +1,96 @@
+/*
+ * Habillage FRTV de la salle de match FACEIT — maquette Claude Design « Salle de match ».
+ * Injecté dans la page (pas dans un Shadow DOM) et actif uniquement quand <html> porte la
+ * classe `frtv-skin-room` (posée par features/room, retirée en quittant la salle).
+ * On ne cible que des préfixes lisibles de composants FACEIT, jamais les hash.
+ */
+
+/* ---- En-tête du match : on garde l'image de la map de FACEIT, bordure et arrondi de la maquette ---- */
+html.frtv-skin-room [class*='styles__HeaderWrapper'] > [class*='styles__Container'] {
+  border: 1px solid #242424 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+/* ---- Carte joueur : 72 px, avatar 48 px dans la carte, bordure et rayon 8 px ---- */
+html.frtv-skin-room :is([name='roster1'], [name='roster2']) [aria-haspopup='dialog'] {
+  padding: 0 !important;
+  border: 1px solid #242424 !important;
+  border-radius: 8px !important;
+  background: #121212 !important;
+  overflow: hidden !important;
+}
+
+html.frtv-skin-room :is([name='roster1'], [name='roster2']) [class*='ListContentPlayer__Background'] {
+  height: 72px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+html.frtv-skin-room :is([name='roster1'], [name='roster2']) [class*='ListContentPlayer__Holder'] {
+  height: 72px !important;
+  border-radius: 0 !important;
+}
+
+html.frtv-skin-room :is([name='roster1'], [name='roster2']) [class*='ListContentPlayer__Body'] {
+  height: 72px !important;
+  padding: 0 12px !important;
+  align-items: center !important;
+}
+
+html.frtv-skin-room :is([name='roster1'], [name='roster2']) [class*='ListContentPlayer__SlotWrapper']:first-child {
+  padding-right: 12px !important;
+}
+
+/* La grande tuile d'avatar qui débordait au-dessus et en dessous de la carte */
+html.frtv-skin-room :is([name='roster1'], [name='roster2']) [class*='styles__PlayerCard-'] {
+  display: none !important;
+}
+
+html.frtv-skin-room :is([name='roster1'], [name='roster2']) [class*='styles__PlayerCardContainer'] {
+  width: 48px !important;
+  height: 48px !important;
+}
+
+html.frtv-skin-room :is([name='roster1'], [name='roster2']) [class*='Avatar__AvatarHolder'] {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 8px !important;
+  background: #242424 !important;
+}
+
+html.frtv-skin-room :is([name='roster1'], [name='roster2']) [class*='Avatar__Image'] {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 8px !important;
+  object-fit: cover !important;
+}
+
+/* Pseudo et Elo : 14 px semi-gras, comme la maquette */
+html.frtv-skin-room :is([name='roster1'], [name='roster2']) [class*='Nickname__Container'] [class*='Text__StyledText'],
+html.frtv-skin-room :is([name='roster1'], [name='roster2']) [class*='styles__EndSlotContainer'] [class*='TextBlock__Holder'] span {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+}
+
+/* Bloc d'une autre extension (ex. Repeek) dans la carte : séparé par un filet, comme la maquette */
+html.frtv-skin-room [data-frtv-sep] {
+  border-top: 1px solid #1f1f1f !important;
+}
+
+/* ---- Colonnes aussi larges que le bandeau d'en-tête (largeur mesurée par features/room) ---- */
+html.frtv-skin-room [class*='styles__Grid']:has(> [name='roster1']) {
+  width: 100% !important;
+  max-width: var(--frtv-room-w, 100%) !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+html.frtv-skin-room :is([name='roster1'], [name='info'], [name='roster2']) {
+  flex: 1 1 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+}

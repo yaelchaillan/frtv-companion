@@ -1,0 +1,90 @@
+/* Geist = police de faceit.com (chargée par la page FACEIT dans l'extension ; ici pour l'aperçu seulement). */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');
+@import '../src/styles/ui.css';
+
+body {
+  width: auto !important; /* popup.css fixe 380 px pour la vraie popup */
+  margin: 0;
+  background: #0a0a0a;
+  color: #f1f1f1;
+  font-family: system-ui, sans-serif;
+}
+
+.pv {
+  padding: 24px;
+}
+
+.pv h1 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.pv h2 {
+  margin: 28px 0 12px;
+  color: #a7a7a7;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pv-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.pv-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pv-frame {
+  margin: 0;
+}
+
+.pv-frame figcaption {
+  margin-bottom: 6px;
+  color: #8a8a8a;
+  font-size: 12px;
+}
+
+.pv-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: #121212;
+  border-radius: 8px;
+  width: max-content;
+}
+
+.pv-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+/* Imitation du fond de la carte « Season » FACEIT */
+.pv-season .frtv {
+  padding: 12px;
+  border-radius: 8px;
+  background: linear-gradient(110deg, #3a0f0f, #1a0d0d 60%, #121212);
+}
+
+.pv-popups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.pv-popup {
+  width: 380px;
+  margin: 0;
+  border: 1px solid #242424;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}

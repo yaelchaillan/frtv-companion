@@ -1,0 +1,288 @@
+/* Visuels du Chrome Web Store (voir store.tsx). Chaque [data-shot] est capturé à sa taille exacte. */
+
+.st {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  background: #050505;
+}
+
+.st-slide,
+.st-tile,
+.st-marquee {
+  position: relative;
+  flex: none;
+  overflow: hidden;
+  background:
+    radial-gradient(900px 520px at 88% -12%, rgba(255, 51, 99, 0.18), transparent 62%),
+    radial-gradient(760px 520px at -8% 112%, rgba(255, 106, 23, 0.14), transparent 60%),
+    #0e0e0e;
+  color: #f1f1f1;
+  font-family: Geist, system-ui, sans-serif;
+}
+
+.st-slide {
+  width: 1280px;
+  height: 800px;
+}
+
+/* Fondu en bas pour les captures coupées */
+.st-slide::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 110px;
+  background: linear-gradient(rgba(14, 14, 14, 0), #0e0e0e 85%);
+  pointer-events: none;
+}
+
+.st-head {
+  position: absolute;
+  top: 48px;
+  right: 64px;
+  left: 64px;
+}
+
+.st-kicker {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff6a17, #ff3363);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.st-title {
+  margin: 4px 0 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.st-sub {
+  max-width: 940px;
+  margin: 8px 0 0;
+  color: #a7a7a7;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+/* ---- salle de match réduite dans un cadre ---- */
+
+.st-frame {
+  position: absolute;
+  top: 222px;
+  right: 64px;
+  left: 64px;
+  height: 640px;
+  border: 1px solid #262626;
+  border-radius: 16px;
+  background: #121212;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.st-room {
+  box-sizing: border-box;
+  width: 1500px;
+  padding: 24px;
+  zoom: 0.768;
+}
+
+.st-room__header {
+  margin-bottom: 24px;
+  padding-top: 16px;
+  border: 1px solid #242424;
+  border-radius: 12px;
+  /* Évoque l'image de map de FACEIT sans la reproduire */
+  background:
+    radial-gradient(70% 140% at 15% 0%, rgba(255, 140, 60, 0.22), transparent 60%),
+    radial-gradient(60% 140% at 90% 100%, rgba(80, 140, 220, 0.2), transparent 60%),
+    linear-gradient(120deg, #2a1d16, #17141a 50%, #131b24);
+}
+
+.st-room__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+}
+
+/* Groupes : sans l'en-tête, pour voir le trio en entier */
+.st-frame--mm .st-room {
+  width: 1440px;
+  zoom: 0.8;
+}
+
+.st-frame--mm .st-room__header {
+  display: none;
+}
+
+.st-frame--mm .st-room__grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.st-frame--mm .st-room__info {
+  display: none;
+}
+
+/* ---- trois cartes d'analyse ---- */
+
+.st-cards {
+  position: absolute;
+  top: 222px;
+  right: 64px;
+  left: 64px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.st-card {
+  width: 440px;
+  zoom: 0.84;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* ---- niveaux ---- */
+
+.st-levels {
+  position: absolute;
+  top: 248px;
+  right: 64px;
+  left: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 44px;
+}
+
+.st-badges {
+  display: flex;
+  gap: 22px;
+}
+
+.st-trackers {
+  display: flex;
+  gap: 24px;
+}
+
+.st-season {
+  padding: 14px;
+  border-radius: 10px;
+  background: linear-gradient(110deg, #3a0f0f, #1a0d0d 60%, #121212);
+}
+
+.st-profile {
+  width: 1074px;
+}
+
+/* ---- popups ---- */
+
+.st-popups {
+  position: absolute;
+  top: 212px;
+  right: 64px;
+  left: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.st-popup {
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+}
+
+/* ---- vignettes ---- */
+
+.st-wordmark {
+  display: block;
+  width: auto;
+}
+
+.st-tile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 440px;
+  height: 280px;
+  padding: 0 30px 0 34px;
+}
+
+.st-tile__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.st-tile__tag {
+  margin-top: 8px;
+  color: #a7a7a7;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.st-tile__line {
+  max-width: 210px;
+  margin-top: 16px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 23px;
+}
+
+.st-marquee {
+  width: 1400px;
+  height: 560px;
+}
+
+.st-marquee__text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 470px;
+}
+
+.st-marquee__title {
+  margin: 22px 0 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+}
+
+.st-marquee__shot {
+  position: absolute;
+  top: 64px;
+  left: 600px;
+  border: 1px solid #262626;
+  border-radius: 16px;
+  background: #121212;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.st-marquee__shot .st-room {
+  zoom: 0.62;
+}

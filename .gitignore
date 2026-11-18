@@ -1,0 +1,10 @@
+node_modules
+.output
+.wxt
+web-ext.config.ts
+*.log
+.DS_Store
+# Documents de travail non publiés (captures FACEIT et EloStack, brief design)
+design/
+# Drapeaux copiés depuis flag-icons par `npm install` (scripts/copy-flags.mjs)
+public/flags/

@@ -1,0 +1,31 @@
+/* Popup : polices locales (Barlow Condensed pour les rangs) et fond de la fenêtre. */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/barlow-condensed-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/barlow-condensed-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/barlow-condensed-700.woff2') format('woff2');
+}
+
+html,
+body {
+  margin: 0;
+  background: #121212;
+}
+
+body {
+  width: 380px;
+}

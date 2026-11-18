@@ -1,0 +1,311 @@
+/* Réplique de la page FACEIT (maquette « Salle de match », 1440 px). Aperçu uniquement. */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-weight: 700;
+  src: url('/fonts/barlow-condensed-700.woff2') format('woff2');
+}
+
+body {
+  margin: 0;
+  background: #060606;
+  color: #f1f1f1;
+  font-family: Geist, sans-serif;
+}
+
+.mk-page {
+  width: 1440px;
+  min-height: 100vh;
+}
+
+.mk-crumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 116px;
+  border-bottom: 1px solid #161616;
+  color: #a7a7a7;
+  font-size: 13px;
+}
+
+.mk-crumbs b {
+  color: #f1f1f1;
+  font-weight: 600;
+}
+
+.mk-green {
+  color: #3ecf8e;
+  font-weight: 600;
+}
+
+.mk-main {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 1208px;
+  margin: 0 auto;
+  padding: 24px 0 80px;
+}
+
+.mk-header {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  align-items: center;
+  height: 132px;
+  padding: 0 40px;
+  box-sizing: border-box;
+  border: 1px solid #242424;
+  border-radius: 12px;
+  background: #121212;
+}
+
+.mk-header__team {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mk-header__team--a {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.mk-header__name {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.mk-header__sub {
+  color: #a7a7a7;
+  font-size: 13px;
+}
+
+.mk-header__sub b {
+  color: #f1f1f1;
+  font-weight: 600;
+}
+
+.mk-header__logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  background: #242424;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: center;
+}
+
+.mk-header__vs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.mk-header__vs span {
+  color: #a7a7a7;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.mk-grid {
+  display: grid;
+  grid-template-columns: 392px 400px 392px;
+  gap: 24px;
+  align-items: start;
+}
+
+.mk-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mk-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mk-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.mk-card {
+  box-sizing: border-box;
+  border: 1px solid #242424;
+  border-radius: 8px;
+  background: #121212;
+  overflow: hidden;
+}
+
+.mk-card__row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 72px;
+  padding: 0 12px;
+}
+
+.mk-avatar {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #242424;
+  color: #a7a7a7;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+}
+
+.mk-name {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mk-flag {
+  flex: none;
+  width: 18px;
+  height: 12px;
+  border-radius: 2px;
+  background: #2e2e2e;
+}
+
+.mk-flag--lg {
+  width: 28px;
+  height: 18px;
+}
+
+.mk-end {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mk-challenger {
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 13px;
+  background: #c8102e;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.mk-repeek {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+  padding: 0 12px;
+  border-top: 1px solid #1f1f1f;
+  color: #8a8a8a;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mk-repeek span:first-child {
+  color: #6f6f6f;
+}
+
+.mk-faceitbox__tabs {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 24px;
+  padding: 0 12px;
+  background: #1a1a1a;
+  color: #a7a7a7;
+  font-size: 11px;
+}
+
+.mk-faceitbox__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  height: 48px;
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.mk-faceitbox__grid small {
+  display: block;
+  color: #a7a7a7;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.mk-stack > * + * {
+  margin-top: 12px;
+}
+
+.mk-box {
+  box-sizing: border-box;
+  border: 1px solid #242424;
+  border-radius: 8px;
+  background: #121212;
+}
+
+.mk-server {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 44px;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+.mk-upcoming {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mk-resched {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.mk-resched span {
+  color: #a7a7a7;
+  font-size: 13px;
+}
+
+.mk-sponsor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  border: 1px dashed #2e2e2e;
+  border-radius: 8px;
+  color: #6f6f6f;
+  font-size: 12px;
+  text-align: center;
+}

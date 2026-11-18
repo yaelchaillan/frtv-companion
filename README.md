@@ -76,6 +76,19 @@ sur la carte de l'extension.
 | `npm run dev` | Mode développement WXT (Chrome dédié, rechargement automatique). |
 | `npm run build:firefox` / `npm run zip` | Build Firefox / archive pour les stores. |
 
+### Publier une version de test (GitHub Releases)
+
+Augmenter `version` dans `package.json`, puis :
+
+```bash
+npm run zip
+git commit -am "Version 0.1.2" && git push
+gh release create v0.1.2 .output/frtv-companion-0.1.2-chrome.zip --title "FRTV Companion 0.1.2 (test)" --notes "…"
+```
+
+Le lien `releases/latest` pointe toujours sur la dernière version. Les testeurs mettent à jour
+comme décrit dans [INSTALLATION.md](INSTALLATION.md).
+
 > `.npmrc` active `legacy-peer-deps` (npm 11.3 plante sur les dépendances pair de
 > Vite/Vitest). `npm test` passe par `scripts/test.mjs` pour contourner un bug de Vitest sous
 > Windows quand le chemin commence par `c:` en minuscule.
